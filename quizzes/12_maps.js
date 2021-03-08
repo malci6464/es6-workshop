@@ -45,7 +45,11 @@ function mapInfo() {
 
 function removingItems() {
   const objKey = {awesome: true}
-  const map = new Map([[objKey, 42], [{}, 'hey'], [45, true]])
+  const map = new Map([
+    [objKey, 42],
+    [{}, 'hey'],
+    [45, true],
+  ])
   const firstSize = map.size
   map.delete(objKey)
   const afterDeleteSize = map.size
@@ -107,14 +111,23 @@ function basicMapSOLUTION() {
 // console.log(basicMapSOLUTION())
 
 function initializeMapSOLUTION() {
-  const map = new Map([['a', 3], [{v: 5, j: 7}, 7], [() => {}, 8]])
+  const map = new Map([
+    ['a', 3],
+    [{v: 5, j: 7}, 7],
+    [() => {}, 8],
+  ])
   return map
 }
 // console.log(initializeMapSOLUTION())
 
 function mapInfoSOLUTION() {
   const objKey = {awesome: true}
-  const map = new Map([[objKey, 42], [4, 55], [true, false], [false, true]])
+  const map = new Map([
+    [objKey, 42],
+    [4, 55],
+    [true, false],
+    [false, true],
+  ])
   return {
     objValue: map.get(objKey),
     mapSize: map.size,
